@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign up</title>
-    <style>
-        *{
+    <title>Document</title>
+    <!-- *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -85,52 +84,34 @@ select, .cou {
 
 [type=submit]:hover{
     background-color: rgb(153, 94, 22);
-}
-
-
-    </style>
+} -->
 </head>
 <body>
-    
-    <form action="signmeup.php" method="post">
-        <h2>Sign up</h2>
-        <div class="name">
-            <label for="name">
-                Name : <input type="text" name="name" id="name" required>
-             </label>
-        </div>
+    <form action="loginController.php" method="post">
+    <div>
+        <label for="email">
+        Email:<input type="email" name="email" required>
+        </label>
+    </div>
 
-        <div class="add">
-            <label for="add">
-                Address : <input type="text" name="add" id="add" required>
-             </label>
-        </div>
+    <div>
+        <label for="password">
+            Password:<input type="password" name="password" required>
+        </label>
+    </div>
 
-        <div class="contact">
-            <label for="contact">
-                Contact : <input type="tel" name="contact" id="contact" required>
-             </label>
-        </div>
-
-        <div class="email">
-            <label for="email">
-                Email : <input type="email" name="email" id="email">
-             </label>
-        </div>
-
-        <div class="pass">
-            <label for="pass">
-                Password : <input type="password" name="pass" id="pass">
-             </label>
-        </div>
-
-         <div class="submit">
-            <input type="submit" value="Sign up">
-         </div>
-         <div>
-            <span>Already have an account</span>
-            <a href="login.php">Login</a>
+    <div>
+        <label for="submit">
+            <input type="submit" name="submit" value="Login">
+        </label>
+        
     </div>
     </form>
+    <div>
+            <span>Don't have an account</span>
+            <a href="signup.php">Sign Up</a>
+    </div>
+ 
+    
 </body>
 </html>
