@@ -6,11 +6,14 @@
          $email=$_POST['email'];
          $password=$_POST['pass'];
 
-         $encryptedPass=password_hash($password,PASSWORD_DEFAULT);
+        //  $encryptedPass=password_hash($password,PASSWORD_DEFAULT);
 
         $con=mysqli_connect('localhost','root','','student');
-        $sql="insert into info(name,address,contact,email,password) values('$name','$address','$contact','$email','$encryptedPass')";
+        $sql="insert into info(name,address,contact,email,password) values('$name','$address','$contact','$email','$password')";
 
         $result= mysqli_query($con,$sql);
+
+        if($result){
+            header("Location:login.php");        }
     }
     ?>

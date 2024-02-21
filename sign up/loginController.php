@@ -22,8 +22,8 @@ if($name!=null){
     exit(); 
 }
 else{
-   
-    echo "Invalid credential";
+    header("Location:login.php?error");
+    exit();
 }
 }
 ?>
